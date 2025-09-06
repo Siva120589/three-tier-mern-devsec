@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git credentialsId: 'GITHUB', url: 'https://github.com/Siva120589/three-tier-mern-devsec.git'
+                git credentialsId: 'GITHUB', git branch: 'main', url: 'https://github.com/Siva120589/three-tier-mern-devsec.git'
             }
         }
         stage('Sonarqube Analysis') {
@@ -81,7 +81,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'GITHUB', url: 'https://github.com/Siva120589/three-tier-mern-devsec.git'
+                git credentialsId: 'GITHUB', git branch: 'main', url: 'https://github.com/Siva120589/three-tier-mern-devsec.git'
             }
         }
         stage('Update Deployment file') {
