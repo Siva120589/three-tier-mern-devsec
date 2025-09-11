@@ -4,7 +4,8 @@ metadata:
   name: mongo-pv
   namespace: three-tier
 spec:
-  capacity: 
+  storageClassName: three-tier-sg
+  capacity:
     storage: 1Gi
   volumeMode: Filesystem
   accessModes:
